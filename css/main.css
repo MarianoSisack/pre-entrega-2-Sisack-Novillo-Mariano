@@ -1,0 +1,431 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*font*/
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*estilos header*/
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+header .menu{
+    background-color: rgb(240, 240, 186);    
+}
+header .menu .submenu ul li{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+/*estilos main*/
+
+main{
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+main .centrar .logo{
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem 0rem 3rem 2rem;
+        
+}
+main .contenedor .vivero-dos{
+    display: none;
+}
+main .contenedor .vivero-tres{
+    display: none;
+}
+main h1{
+    margin-left: 2rem;
+    padding-top: 1rem;
+    font-weight: 700;
+}
+main .contenedor{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 50%;
+    margin: 1rem 2rem 0rem 2rem;
+    gap: 1rem;
+    
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+/* estilos footer */
+
+footer{
+    background-color: beige;  
+    margin-bottom: 0 rem;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+footer div{ 
+    display: flex;  
+    justify-content: space-around;
+}
+footer div p{
+    font-size: 0.7rem;
+    align-self: end;
+    color: rgb(136, 136, 105);
+}
+
+footer div img{
+    width: 2rem;
+    height: 2rem;
+}
+
+/*mq tablet index*/
+
+@media screen and (min-width: 600px){
+    main .centrar .logo{
+        height: 5rem;
+        width: 5rem;
+        margin-top: 3rem;
+    }
+    main .centrar{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    main .contenedor{
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 30% 50%;  
+        
+    }
+    main .contenedor .vivero-dos{
+        display: block;
+        grid-column: span 2;
+    }
+    footer div img{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/*mq desktop*/
+
+@media screen and (min-width: 1024px){
+    main .centrar .logo{
+        height: 7rem;
+        width: 7rem;
+        margin-top: 3rem;
+    }
+    main .contenedor .vivero{
+        grid-column: span 2;
+    }
+    
+    main .contenedor .vivero-tres{
+        display: block;
+        grid-column: span 1;
+    }
+    main .contenedor{
+        margin-top: 2rem;
+        height: 80vh;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-template-rows: 35% 45%;
+    }
+    
+    main .vivero-dos{
+        grid-column: span 2;
+    }
+
+/*footer*/
+
+    footer div img{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+    
+/*css vivero*/
+
+.main-dos{
+    background-color: white;
+    height: 330vh;
+}
+
+.main-dos .main-vivero .texto-cinco{
+    display: none;
+}
+main .main-vivero {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    margin: 1rem 2rem 0rem 2rem;
+    
+}
+main .main-vivero{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 50% 20% 50% 20% 50% 20% 50%;
+    gap: 3rem;
+}
+main .main-vivero div .img-produccion{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .main-vivero .texto{
+    padding-top: 2rem;
+}
+/*footer*/
+footer .contenedor-footer{
+    padding-bottom: 1rem;
+}
+
+/*mq tablet*/
+
+@media screen and (min-width: 600px){
+    /*main*/
+    .main-dos{
+        height: 200vh;
+        
+    }
+    .main-dos .main-vivero{
+        margin-top: 2rem;
+        height: 120vh;
+        grid-template-columns: 0.6fr 1.4fr;
+        grid-template-rows: repeat(4, 30%);
+        gap: 3rem;
+    }
+    .main-dos .centrar .logo{
+        height: 5rem;
+        width: 5rem;
+        margin-top: 3rem;
+    }
+
+    /*footer*/
+    
+    footer div img{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+    /*mq desktop*/
+    
+@media screen and (min-width: 1024px){
+    /*main*/
+    .main-dos{
+        height: 180vh;
+        margin-bottom: 2rem;
+    }
+    .main-dos .centrar .logo{
+        height: 7rem;
+        width: 7rem;
+        margin-top: 3rem;
+    }
+    .main-dos .main-vivero{
+        margin: 2rem 4rem 2rem 4rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10% 40% 10% 40%;
+    }
+    .main-dos .main-vivero .texto-uno{
+        grid-column: span 2;
+    }
+    .main-dos .main-vivero .texto-dos, .texto-tres, .texto-cuatro{
+        display: none;
+    }
+    .main-dos .main-vivero .texto-cinco{
+        display: block;
+    }
+    .main-dos .main-vivero .cactus-variados{
+        grid-column: span 3;
+    }
+}
+
+/*css variedades*/
+
+.main-tres{
+    
+    padding-bottom: 3rem;
+}
+.main-tres .variedades-cactus {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: repeat(8, 30%);
+    margin: 1rem 2rem 1rem 2rem;
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+.main-tres .variedades-cactus .especies{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+.main-tres .variedades-cactus .especies .especies-dos{
+    display: none;
+}
+.main-tres .variedades-cactus a{
+    font-size: smaller;
+    background-color: rgb(233, 233, 142);
+    color: rgb(65, 33, 10);
+    text-decoration: none;
+    border-radius: 10%;
+    padding: 0.5rem;
+}
+
+/*mq tablet*/
+@media screen and (min-width: 600px){
+    .main-tres .variedades-cactus{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 50% 50%;
+    }
+    .main-tres .variedades-cactus .especies{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;    
+    }   
+}
+
+/*mq desktop*/
+@media screen and (min-width: 1024px){
+    .main-tres .variedades-cactus{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 30%);
+        gap: 2rem;
+        
+    }
+    .main-tres .variedades-cactus .especies{
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
+        margin-bottom: 5rem;    
+    }
+}
+/*css tienda*/
+
+.main-tres{
+    padding-bottom: 3rem;
+}
+.main-cuatro .variedades-cactus {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: repeat(8, 30%);
+    margin: 1rem 2rem 1rem 2rem;
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+.main-cuatro .variedades-cactus .especies{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+.main-cuatro .variedades-cactus .especies .especies-dos{
+    display: none;
+}
+.main-cuatro .variedades-cactus a{
+    font-size: smaller;
+    background-color: rgb(233, 233, 142);
+    color: rgb(65, 33, 10);
+    text-decoration: none;
+    border-radius: 10%;
+    padding: 0.5rem;
+}
+.pago{
+   margin-top: 4rem;
+   margin-left: 1rem;
+   font-weight: 100; 
+}
+.pago div ul li{
+    list-style: none;
+}
+
+/*mq tablet*/
+@media screen and (min-width: 600px){
+    .main-cuatro .variedades-cactus{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 50% 50%;
+    }
+    .main-cuatro .variedades-cactus .especies{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;    
+    }
+    .pago{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+}
+
+/*mq desktop*/
+@media screen and (min-width: 1024px){
+    .main-cuatro .variedades-cactus{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 30%);
+        gap: 2rem;
+        
+    }
+    .main-cuatro .variedades-cactus .especies{
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
+        margin-bottom: 5rem;    
+    }
+    
+}
+    
+        
+/*css contacto*/
+
+
+.main-cinco .iconos{
+    width: 1rem;
+    height: 1rem;
+}
+.main-cinco .contacto{
+    
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 35%);
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.main-cinco .mapa{
+    display: none;
+}
+.main-cinco .contacto .telefono, .email, .ubicacion{
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+@media screen and (min-width: 600px){
+    .main-cinco .contacto .mapa{
+        display: block;
+        
+    }
+    .main-cinco .contacto{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30% 50%;
+        gap: 1rem;
+   } 
+}
